@@ -26,4 +26,10 @@ public class HelloWorldController {
     public  String helloWorldName(@RequestParam(value = "firstname") String firstname){
         return "Hello "+firstname+" "+"From BridgeLabz";
     }
+
+    //UC4
+    @PostMapping("/addUser")
+    public String addUser(@RequestBody User user){
+        return "Hello "+user.getFirstName()+" "+user.getLastName()+" From BridgeLabz";
+    }
 }
