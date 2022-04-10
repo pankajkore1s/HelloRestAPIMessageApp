@@ -32,4 +32,11 @@ public class HelloWorldController {
     public String addUser(@RequestBody User user){
         return "Hello "+user.getFirstName()+" "+user.getLastName()+" From BridgeLabz";
     }
+
+    //UC5
+    @PutMapping("/put{firstname}")
+    public String HelloWorldName(@PathVariable String firstname,
+                                 @RequestParam(value = "lastname") String lastname){
+        return "Hello "+" "+firstname+" "+lastname +" from BridgeLabz";
+    }
 }
